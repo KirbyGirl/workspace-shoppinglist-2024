@@ -31,6 +31,7 @@ function addElement() {
     console.log(userinput);
     $('#todo').append('<li class="cool">'+ userinput + ' </li>');
     $(this).remove();
+    $('li').click(changeStyle);
 
 }
 
@@ -38,7 +39,7 @@ function addElement() {
 
 //  click the li element will change the changeStyle
 //  three style : complete, cool, hot
-$('li').click(changeStyle);
+//$('li').click(changeStyle);
 function changeStyle() {
   if ($(this).hasClass("cool")){
     $(this).removeClass('cool');
